@@ -1,0 +1,46 @@
+{
+  "pages": [
+      "pages/index/index",
+      "pages/classify/classify",
+      "pages/classify1/classify1",
+      "pages/shopping/shopping",
+      "pages/My/My",
+      "pages/Theme/Theme",
+      "pages/detail/detail",
+      "pages/order/order"
+  ],
+  "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#ab956d",
+      "navigationBarTitleText": "杂货商货",
+      "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/img/shouye1.png",
+      "selectedIconPath": "/img/shouye.png"
+    }, {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "/img/fenlei1.png",
+      "selectedIconPath": "/img/fenlei.png"
+    }, {
+      "pagePath": "pages/shopping/shopping",
+      "text": "购物车",
+      "iconPath": "/img/gouwuche1.png",
+      "selectedIconPath": "/img/gouwuche.png"
+    }, {
+      "pagePath": "pages/My/My",
+      "text": "我的",
+      "iconPath": "/img/wode1.png",
+      "selectedIconPath": "/img/wode.png"
+    }],
+    "color":"#ccc",
+    "selectedColor": "#1c2",
+    "borderStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
