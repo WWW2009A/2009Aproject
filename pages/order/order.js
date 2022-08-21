@@ -1,4 +1,6 @@
 // pages/order/order.js
+import Base from  "../../utils/base";
+const  base = new Base();
 Page({
 
   /**
