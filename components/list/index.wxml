@@ -1,0 +1,8 @@
+<!--components/list/index.wxml-->
+<view class="list">
+    <block wx:for="{{list}}" wx:key="id">
+        <c-product class="pro" product="{{item}}">
+            <text>￥{{item.price}}</text>
+        </c-product>
+    </block>
+</view>

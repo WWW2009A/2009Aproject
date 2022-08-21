@@ -1,4 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
+<swiper indicator-dots circular autoplay class="swiper">
+  <block wx:for="{{bannerData}}" wx:key="key_word">
+    <swiper-item>
+      <image src="{{item.img.url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="title">精选主题</view>
+<view class="theme_container">
+  <block wx:for="{{themeData}}" wx:key="id">
+    <image bind:tap="toTheme" mark:id="{{item.id}}" class="topic_img" src="{{item.topic_img.url}}"></image>
+  </block>
 </view>
+<view class="title">最近新品</view>
+<c-list list="{{recentData}}"></c-list>

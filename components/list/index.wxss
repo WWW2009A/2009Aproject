@@ -1,0 +1,19 @@
+/* components/list/index.wxss */
+.list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pro {
+  width: 49%;
+  background: #f1f1f1;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+.img {
+  width: 270rpx;
+  height: 270rpx;
+}

@@ -1,0 +1,6 @@
+<!--components/product/index.wxml-->
+<view bind:tap="toDetail" class="product">
+    <image class="img" src="{{product.main_img_url}}"></image>
+    <text class="name">{{product.name}}</text>
+    <slot></slot>
+</view>
