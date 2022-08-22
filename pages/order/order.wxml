@@ -1,1 +1,49 @@
-<!--pages/order/order.wxml-->
+<view class="detail_top">
+    <view class="fixed_box" bind:tap="toCart">
+        <text class="iconfont icon-gouwuchekong {{isScale?'animate':''}}"></text>
+        <text wx:if="{{total>0}}" class="num">{{total}}</text>
+    </view>
+    <image src="{{main_img_url}}" class="imgSrc"></image>
+    <view class="box">
+        <picker bind:change="onNumChange" mode="selector" range="{{arr}}" class="num_box">
+            <view>
+                <!-- picker不支持弹性盒子 -->
+                <text>数量</text>
+                <text>{{num}}</text>
+                <text class="iconfont icon-xiajiantou"></text>
+            </view>
+        </picker>
+        <view class="line"></view>
+        <view bind:tap="onAddToCart" class="cart_box">
+            <text>加入购物车</text>
+            <text class="iconfont icon-gouwuchekong"></text>
+            <image style="transform: {{translateStyle}};" class="flyImg {{isFly?'fly':''}}" src="{{main_img_url}}"></image>
+        </view>
+    </view>
+    <view class="stock">{{stock>0?"有货":"无货"}}</view>
+    <view class="product_name">{{name}}</view>
+    <view class="price">￥{{price}}</view>
+</view>
+<view class="detail_bottom">
+    <view class="btnList">
+        <block wx:for="{{btnList}}" wx:key="*this">
+            <view bind:tap="onTab" mark:index="{{index}}" class="btn {{index==curIndex?'active':''}}">{{item}}</view>
+        </block>
+    </view>
+    <view hidden="{{curIndex!=0}}" class="product_detail">
+        <block wx:for="{{imgs}}" wx:key="index">
+            <image src="{{item.img_url.url}}"></image>
+        </block>
+    </view>
+    <view hidden="{{curIndex!=1}}" class="product_props">
+        <block wx:for="{{properties}}" wx:key="index">
+            <view class="prop">
+                <text>{{item.name}}</text>
+                <text>{{item.detail}}</text>
+            </view>
+        </block>
+    </view>
+    <view hidden="{{curIndex!=2}}" class="product_save">
+        7天无理由退货
+    </view>
+</view>

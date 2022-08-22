@@ -1,0 +1,43 @@
+/* components/cartItem/index.wxss */
+.cartItem {
+    display: flex;
+    padding: 20rpx 30rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #999;
+  }
+  .selectImg {
+    width: 48rpx;
+    height: 48rpx;
+  }
+  .img {
+    width: 240rpx;
+    height: 240rpx;
+  }
+  .info {
+    flex: 1;
+    height: 240rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .info_top,
+  .info_bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ctrl_box {
+    display: flex;
+    font-size: 40rpx;
+    align-items: center;
+  }
+  .ctrl_box input {
+    width: 3em;
+    text-align: center;
+    margin: 0 20rpx;
+    font-size: 28rpx;
+  }
+  .ctrl_box .disable {
+    color: #ccc;
+  }
+  

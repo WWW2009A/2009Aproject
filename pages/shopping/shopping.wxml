@@ -1,2 +1,19 @@
-<!--pages/shopping/shopping.wxml-->
-<text>pages/shopping/shopping.wxml</text>
+<!--pages/cart/cart.wxml-->
+<scroll-view scroll-y class="cart_list">
+    <block wx:for="{{cartData}}" wx:key="id">
+        <c-cartItem bind:del="onDel" bind:changeCounts="onChange" cart="{{item}}"></c-cartItem>
+    </block>
+</scroll-view>
+<view class="bottom_box">
+    <view bindtap="onAllSelect" class="all_select">
+        <image src="{{isAllSelected?allSelected:all}}"></image>
+        <text>全选（{{totalNum}}）</text>
+    </view>
+    <view class="order_box">
+        <view class="toOrder">下单</view>
+        <view class="price_box">
+            <text>{{totalPrice}}</text>
+            <image bindtap="toOrder" src="/img/icon/arrow@grey.png"></image>
+        </view>
+    </view>
+</view>

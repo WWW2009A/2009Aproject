@@ -1,1 +1,40 @@
-/* pages/shopping/shopping.wxss */
+/* pages/cart/cart.wxss */
+.cart_list{
+    height: calc(100vh-100rpx);
+}
+.bottom_box{
+    padding: 0 30rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #ab9564;
+    width: 100%;
+    box-sizing: border-box;
+}
+.all_select{
+    display: flex;
+    align-items: center;
+}
+.all_select image{
+    width: 64rpx;
+    height: 64rpx;
+    margin-right: 20rpx;
+}
+.order_box{
+    display: flex;
+    align-items: center;
+}
+.toOrder{
+    line-height: 32rpx;
+    padding-right: 40rpx;
+    border-radius: 1rpx dotted #ccc;
+    margin-right: 20rpx;
+}
+.order_box image{
+    width: 48rpx;
+    height: 36rpx;
+}

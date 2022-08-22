@@ -1,0 +1,19 @@
+<!--components/cartItem/index.wxml-->
+<view class="cartItem">
+    <image bind:tap="onSelect" class="selectImg" src="{{cart.status?select:noselect}}"></image>
+    <image src="{{cart.imgSrc}}" class="img"></image>
+    <view class="info">
+        <view class="info_top">
+            <text class="name">{{cart.name}}</text>
+            <text class="price">￥{{cart.price}}</text>
+        </view>
+        <view class="info_bottom">
+            <view class="ctrl_box">
+                <text class="{{cart.count==1?'disable':''}}" bind:tap="onCut">-</text>
+                <input type="text" value="{{cart.count}}" />
+                <text bind:tap="onAdd">+</text>
+            </view>
+            <text bind:tap="onDel">x</text>
+        </view>
+    </view>
+</view>
