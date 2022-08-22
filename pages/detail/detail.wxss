@@ -1,1 +1,111 @@
 /* pages/detail/detail.wxss */
+.order_info{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:1rpx solid #333;
+}
+.order_box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.key{
+  color: #999;
+}
+.val{
+  color: #3333;
+  margin-left: 20rpx;
+}
+.status{
+  line-height: 32rpx;
+
+}
+.status.unpay{
+  color: red;
+}
+.status.payed{
+  color: #ab9564;
+}
+.status.shipments{
+  color: #0f0;
+}
+.address_box{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  height:150rpx;
+  font-size: 40rpx;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.address_box image{
+  width:48rpx;
+  height: 48rpx;
+}
+.info_box{
+  flex:1;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 30rpx;
+}
+.info_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left,.right{
+  display: flex;
+  align-items: center;
+}
+.left image,.right image{
+  margin-right: 10rpx;
+}
+.address{
+  font-size: 36rpx;
+}
+.order{
+  display: flex;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.img{
+  width:260rpx;
+  height: 260rpx;
+  background-color: #f4f5f4;
+}
+.order_middle{
+  flex:1;
+}
+.footer{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  position: fixed;
+  left:0;
+  bottom: 0;
+  border-top: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.accounts_box{
+  flex:1;
+  color: red;
+  padding-left: 30rpx;
+}
+.pay{
+  flex-basis: 180rpx;
+  background-color: #ab9564;
+  color:#fff;
+  text-align: center;
+}
+.pay.disable{
+  opacity: .5;
+}

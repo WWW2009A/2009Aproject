@@ -14,7 +14,6 @@ Page({
     this.setData({ cartData });
     // 初始化全选状态
     this.getAllStatus();
-
     // 初始化商品总数和总价
     this.getTotal();
   },
@@ -115,7 +114,7 @@ Page({
 //   跳转订单页面
   toOrder(){
       wx.reLaunch({
-        url: '/pages/order/order?totalPrice='+this.data.totalPrice,
+        url: '/pages/detail/detail?totalPrice='+this.data.totalPrice,
       })
   }
 

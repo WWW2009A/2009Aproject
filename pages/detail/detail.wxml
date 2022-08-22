@@ -1,2 +1,57 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="order_info" wx:if="{{orderInfo}}">
+  <view class="order_left">
+    <view class="order_box">
+      <view class="key">下单时间：</view>
+      <view class="val">{{orderInfo.createTime}}</view>
+    </view>
+    <view class="order_box">
+      <view class="key">订单编号：</view>
+      <view class="val">{{orderInfo.orderNo}}</view>
+    </view>
+  </view>
+  <view class="order_status">
+    <view wx:if="{{orderInfo.status==1}}" class="status unpay">待付款</view>    
+    <view wx:if="{{orderInfo.status==2}}" class="status payed">已付款</view>
+    <view wx:if="{{orderInfo.status==3}}" class="status shipments">已发货</view>
+  </view>
+</view>
+<view bind:tap="onAddress" wx:if="{{addressInfo}}" class="address_box">
+  <view class="info_box">
+    <view class="info_top">
+      <view class="left">
+        <image src="/img/icon/user.png"></image>
+        <text>{{addressInfo.name}}</text>
+      </view>
+      <view class="right">
+        <image src="/img/icon/mobile.png"></image>
+        <text>{{addressInfo.mobile}}</text>
+      </view>
+    </view>
+    <view class="address">{{addressInfo.detailAddress}}</view>
+  </view>
+  <view>></view>
+</view>
+<view bind:tap="onAddress" wx:else class="address_box">
+  <text class="add_icon">+</text>
+  添加地址
+</view>
+<view class="order_list">
+  <block wx:for="{{orderData}}" wx:key="index">
+    <view class="order">
+      <image class="img" src="{{item.imgSrc||item.main_img_url}}"></image>
+      <view class="order_middle">
+        <view class="name">{{item.name}}</view>
+        <view class="price">￥{{item.price}}</view>
+      </view>
+      <view class="order_right">X{{item.count||item.counts}}</view>
+    </view>
+  </block>
+</view>
+<view class="footer">
+  <view class="accounts_box">
+    付款合计：￥{{shu}}
+  </view>
+  <view bind:tap="onPay" class="pay {{addressInfo?'':'disable'}}">去付款</view>
+</view>
+

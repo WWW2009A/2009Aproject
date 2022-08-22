@@ -91,7 +91,7 @@ Page({
   payOrders(e){
     const id = e.mark.id;
     wx.navigateTo({
-      url: '/pages/order/order?id='+id,
+      url: '/pages/detail/detail?id='+id,
     })
   }
 })

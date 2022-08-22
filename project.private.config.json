@@ -13,6 +13,13 @@
           "query": "id=11",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/My/My",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
