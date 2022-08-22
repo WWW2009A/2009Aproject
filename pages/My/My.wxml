@@ -1,2 +1,36 @@
 <!--pages/My/My.wxml-->
-<text>pages/My/My.wxml</text>
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        <text wx:if="{{txhide}}" class="about" bind:tap="getInfo">关于我们</text>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/page/component/address/address" bind:tap="onChoose">地址管理</navigator>
+        </view>
+        <view wx:if="{{hasAddress}}" class="address-list">
+            <view>{{addressInfo.name}}</view>
+            <view>{{addressInfo.mobile}}</view>
+            <view>{{addressInfo.detailAddress}}</view>
+        </view>
+    </view>
+    <view class="orders-box">
+        <view class="orders">我的订单</view>
+        <block wx:for="{{orderData}}" wx:key="*this">
+          <view mark:id="{{item.id}}" bindtap="payOrders" class="orders-list" wx:for="{{orderData}}" wx:key="index">
+              <view class="orders-number">订单编号：{{item.order_no}}</view>
+              <view class="orders-detail">
+                  <image src="{{item.snap_img}}"></image>
+                  <view class="">{{item.snap_name}}</view>
+                  <view class="">{{item.total_count}}</view>
+                  <text class="orders-status">{{item.total_price}}</text>
+              </view>
+              <view class="orders-footer">
+                  <text>实付：￥{{item.total_price}}</text>
+                  <button size="mini" class="orders-btn">付款</button>
+              </view>
+          </view>
+        </block>
+    </view>
+</view>
